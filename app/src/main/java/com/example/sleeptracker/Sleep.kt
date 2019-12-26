@@ -4,9 +4,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "sleep")
-class Sleep (
+data class Sleep (
     @PrimaryKey(autoGenerate = true) val id:Int,
-    val startDate: String,
+    val startDate: Long = System.currentTimeMillis(),
     val endDate: String,
     val quality: Int
 )

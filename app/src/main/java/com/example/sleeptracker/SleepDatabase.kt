@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import java.security.AccessControlContext
 
-@Database(entities = arrayOf(Sleep::class), version = 1)
+@Database(entities = [Sleep::class], version = 1)
 public abstract class SleepDatabase: RoomDatabase() {
     //create an instance of the DAO
     abstract fun sleepDao():SleepDao
